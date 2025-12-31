@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 export default function Contact() {
   return (
     <div className="min-h-screen pt-20 pb-12 bg-gray-50">
-      <div className="bg-slate-900 text-white py-16 mb-12">
+      <div className="bg-white py-16 mb-12 border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-slate-300 max-w-2xl mx-auto">
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-black">Get in Touch</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Have questions about a property? Ready to schedule a visit? We're here to help.
           </p>
         </div>
@@ -69,9 +69,17 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Google Maps Placeholder */}
-            <div className="h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 font-medium border border-gray-300">
-              Google Maps Integration
+            {/* Google Maps - Kochi Technopark */}
+            <div className="h-80 rounded-xl overflow-hidden shadow-sm border border-gray-100">
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.7841124654524!2d76.3267!3d10.0357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d50e5555555%3A0x5555555555555555!2sKochi%20Technopark%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
