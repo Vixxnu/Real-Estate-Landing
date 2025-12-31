@@ -1,0 +1,125 @@
+Create a modern, responsive Real Estate Landing Page using Next.js and Tailwind CSS.
+
+PROJECT REQUIREMENTS:
+- Framework: Next.js (App Router preferred)
+- Styling: Tailwind CSS
+- Responsive: Mobile-first, tablet & desktop optimized
+- Clean, scalable folder structure
+- Clearly commented code for easy future edits
+- SEO-friendly structure
+
+PAGES (5 TOTAL):
+1. Home (Landing Page)
+2. Properties
+3. About Us
+4. Contact Us
+5. Privacy Policy
+
+FUNCTIONAL REQUIREMENTS:
+
+HOME PAGE:
+- Hero section with:
+  - Headline
+  - Subheading
+  - CTA buttons (Call Now / WhatsApp)
+- Featured Properties section (show 3 properties)
+- Trust badges:
+  - Years of Experience
+  - Local Expertise
+  - Verified Listings
+- Strong call-to-action section near the bottom
+
+PROPERTIES PAGE:
+- Display property cards in a responsive grid
+- Each property card should include:
+  - Property image
+  - Title
+  - Location
+  - Price
+  - Property type
+  - “Enquire on WhatsApp” button
+- Properties must be fetched dynamically from Google Sheets using a public JSON API
+- Include a fallback dummy property array if the Google Sheets fetch fails
+
+ABOUT US PAGE:
+- Short story of the agency
+- Mission and core values
+- Local real estate market expertise
+
+CONTACT PAGE:
+- Contact form with:
+  - Name
+  - Phone number
+  - Message
+- Click-to-call phone number
+- WhatsApp contact button
+- Google Maps embed placeholder
+
+PRIVACY POLICY PAGE:
+- Simple static privacy policy text
+
+DATA REQUIREMENTS:
+- Create a file at:
+  /data/properties.js
+
+- Dummy property structure:
+  [
+    {
+      id: 1,
+      title: "Luxury 3BHK Apartment",
+      price: "₹85 Lakhs",
+      location: "Kochi",
+      image: "https://images.unsplash.com/...",
+      type: "Apartment",
+      status: "Available"
+    }
+  ]
+
+GOOGLE SHEETS INTEGRATION:
+- Fetch properties from a public Google Sheet using fetch()
+- Clearly comment where the Google Sheet ID should be placed
+- If the Google Sheets API fails or returns empty data, automatically fall back to the dummy properties file
+- Do NOT hardcode properties directly inside components
+
+COMPONENT STRUCTURE:
+- components/
+  - Navbar.jsx
+  - Footer.jsx
+  - PropertyCard.jsx
+  - PropertyGrid.jsx
+  - CTAButton.jsx
+
+ROUTING:
+- Use Next.js App Router
+- Clean URLs:
+  - /properties
+  - /about
+  - /contact
+  - /privacy-policy
+
+DESIGN REQUIREMENTS:
+- Clean, modern real estate UI
+- Subtle hover animations
+- Rounded cards
+- Soft shadow effects
+- Sticky navigation bar
+- Consistent real estate-friendly color palette
+- Smooth transitions and good spacing
+
+ADMIN & FUTURE-READY:
+- Properties must come from a data layer (Google Sheets or local data file)
+- No JSX hardcoding of listings
+- Easy to replace Google Sheets with a CMS later (Sanity, Strapi, etc.)
+
+DEPLOYMENT READY:
+- Compatible with Vercel and Netlify
+- Include a README.md with:
+  - How to run the project locally
+  - How to connect Google Sheets
+  - How to replace dummy data with live data
+
+IMPORTANT NOTES:
+- Keep everything frontend-focused
+- Do NOT overcomplicate with backend logic
+- Keep the architecture clean and scalable
+- Comment all important logic clearly
